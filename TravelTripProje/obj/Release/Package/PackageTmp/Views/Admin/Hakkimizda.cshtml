@@ -1,0 +1,26 @@
+﻿@using  TravelTripProje.Models.Siniflar
+@model  List<Hakkimizda>
+
+@{
+    ViewBag.Title = "Hakkimizda";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br /> 
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <td>Resim Url</td>
+            <td>Güncelle</td> 
+            <td>Detay</td> 
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@item.FotoUrl</td>
+        <td><a href="/Admin/HakkimizdaGetir/@item.id" class="btn btn-warning">Güncelle</a></td>
+        <td><a href="/About/Index" class="btn btn-primary">Detaya Git</a></td>
+    </tr>
+        }
+    </table>
+</div>
+

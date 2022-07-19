@@ -1,0 +1,24 @@
+﻿@model TravelTripProje.Models.Siniflar.iletisim
+@{
+    ViewBag.Title = "iletisim";
+    Layout = "~/Views/Shared/MainLayout.cshtml";
+}
+<br />
+<div class="container">
+    <form class="form-group" method="post">
+        <div class="control-label">Ad Soyad</div>
+        @Html.TextBoxFor(p => p.AdSoyad, new { @class = "form-control" })
+        <br />
+        <div class="control-label">E-Mail</div>
+        @Html.TextBoxFor(p => p.Mail, new { @class = "form-control" })
+        <br />
+        <div class="control-label">Konu</div>
+        @Html.TextBoxFor(p => p.Konu, new { @class = "form-control" })
+        <br />
+        <div class="control-label">Mesaj</div>
+        @Html.TextAreaFor(p => p.Mesaj, 0, 60, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-primary">Gönder</button>
+    </form>
+    <br />
+</div>

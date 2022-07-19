@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+    <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="leftMenu">
+        <button onclick="closeLeftMenu()" class="w3-bar-item w3-button w3-large">Kapat &times;</button>
+        <a href="/Admin/Index" class="w3-bar-item w3-button">Bloglar</a>
+        <a href="/Admin/Yorum" class="w3-bar-item w3-button">Yorumlar</a>
+        <a href="/Admin/iletisim" class="w3-bar-item w3-button">İletişim Paneli</a>
+        <a href="/Admin/Hakkimizda/" class="w3-bar-item w3-button">Hakkımızda</a>
+        <a href="/Default/Index" class="w3-bar-item w3-button">Siteye Git -></a>
+        <a href="/GirisYap/LogOut" class="w3-bar-item w3-button">Çıkış Yap -></a>
+    </div>
+
+
+    <div class="w3-teal">
+        <button class="w3-button w3-teal w3-xlarge w3-left" onclick="openLeftMenu()">&#9776;</button>
+        <div class="w3-container">
+            <h1>Admin Paneli</h1>
+
+        </div>
+    </div>
+
+    <div class="w3-container">
+        @RenderBody()
+    </div>
+
+    <script>
+        function openLeftMenu() {
+            document.getElementById("leftMenu").style.display = "block";
+        }
+
+        function closeLeftMenu() {
+            document.getElementById("leftMenu").style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>
+
